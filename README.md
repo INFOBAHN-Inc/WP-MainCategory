@@ -13,6 +13,13 @@ the_main_category()
 <span class="someclass"><?php the_main_category(); ?></span>
 ```
 
+the_main_category_slug()
+: 設定したメインカテゴリのスラッグを出力する
+
+```html
+<span class="<?php the_main_category_slug(); >">somecontents</span>
+```
+
 have_main_category()
 : メインカテゴリが設定されているか判定する
 

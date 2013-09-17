@@ -124,3 +124,12 @@ function the_main_category( $post_id=null ) {
 	$category = get_main_category($post_id);
 	echo ($category) ? $category->name : "";
 }
+
+/**
+ * フロント用 メインカテゴリスラッグの出力
+ * @param string $post_id
+ */
+function the_main_category_slug( $post_id=null ) {
+	$category = get_main_category($post_id);
+	echo ($category) ? $category->slug : "";
+}
