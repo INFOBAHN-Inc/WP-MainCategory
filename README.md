@@ -6,22 +6,23 @@ WP カスタムフィールドに任意のカテゴリを保存する
 
 ### HTML テンプレート用関数
 
-the_main_category()
-: 設定したメインカテゴリを出力する
+#### *the_main_category()*
+設定したメインカテゴリを出力する
 
 ```html
 <span class="someclass"><?php the_main_category(); ?></span>
 ```
 
-the_main_category_slug()
+#### *the_main_category_slug()*
+
 : 設定したメインカテゴリのスラッグを出力する
 
 ```html
 <span class="<?php the_main_category_slug(); >">somecontents</span>
 ```
 
-have_main_category()
-: メインカテゴリが設定されているか判定する
+#### *have_main_category()*
+メインカテゴリが設定されているか判定する
 
-get_main_category()
-: メインカテゴリをテキストで返す
+#### *get_main_category()*
+メインカテゴリをテキストで返す
