@@ -22,7 +22,7 @@ define("MAIN_CATEGORY_POST_META", "main_category");
  * 管理画面のselect要素に指定する名前
  * @var string
  */
-define("MAIN_CATEGORY_POST_NAME", "main_cateogry");
+define("MAIN_CATEGORY_POST_NAME", "main_category");
 /**
  * nonce 用ユニークキー
  * @var string
