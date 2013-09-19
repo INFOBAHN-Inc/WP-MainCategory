@@ -15,7 +15,7 @@ WP カスタムフィールドに任意のカテゴリを保存する
 
 #### *the_main_category_slug()*
 
-: 設定したメインカテゴリのスラッグを出力する
+設定したメインカテゴリのスラッグを出力する
 
 ```html
 <span class="<?php the_main_category_slug(); >">somecontents</span>
