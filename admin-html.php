@@ -18,3 +18,17 @@ wp_dropdown_categories(array(
 	'hierarchical'     => 1,
 ));
 ?>
+<script>
+jQuery(function ($) {
+	var $mainCategory = $('#main_category');
+
+	$mainCategory.on('change', function (event) {
+		var $this = $(this),
+			val   = $this.val();
+
+		if (val !== '-1') {
+			$('#categorydiv input[value=' + val + ']').prop('checked', true);
+		}
+	});
+});
+</script>
