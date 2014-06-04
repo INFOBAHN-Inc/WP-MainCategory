@@ -26,3 +26,15 @@ WP カスタムフィールドに任意のカテゴリを保存する
 
 #### *get_main_category()*
 メインカテゴリをテキストで返す
+
+### カスタム投稿タイプに表示
+
+function.php から `main_category_add_meta` フィルタで追加
+
+```php
+add_filter('main_category_add_meta', function ($types) {
+    $types[] = 'custom_posts';
+
+    return $types;
+});
+```

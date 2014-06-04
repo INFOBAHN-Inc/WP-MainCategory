@@ -40,14 +40,20 @@ define("MAIN_CATEGORY_NONCE_POST_NAME", "main_category_nonce");
  */
 add_action("admin_menu", function () {
 
-	add_meta_box("main_category_section", "メインカテゴリ", function ($wppost, $plugin) {
+	$post_types = (array) apply_filters('main_category_add_meta', array('post'));
+
+	$callback = function ($wppost, $plugin) {
 
 		$nonce      = wp_create_nonce(MAIN_CATEGORY_NONCE_NAME);
 		$registed   = get_post_meta($wppost->ID, MAIN_CATEGORY_POST_META, true);
 
 		include_once dirname(__FILE__) . "/admin-html.php";
 
-	}, 'post', 'side' );
+	};
+
+	foreach ($post_types as $type) {
+		add_meta_box("main_category_section", "メインカテゴリ", $callback, $type, 'side');
+	}
 });
 
 /**
